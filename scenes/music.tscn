@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://leynegsf8w03"]
+
+[ext_resource type="AudioStream" uid="uid://dnu5kqg31ue1j" path="res://assets/music/Lofi hip hop Volume 1) - 06 - Soft Lights (Loop Version).wav" id="1_05ggv"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_05ggv")
+autoplay = true
+max_distance = 4096.0
+bus = &"Music"

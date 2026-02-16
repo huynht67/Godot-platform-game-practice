@@ -1,0 +1,14 @@
+AudioStreamPlayer2D
+CollisionShape2D
+Node2D
+AnimationPlayer
+RayCast2D
+Timer
+Sprite2D
+Area2D
+CharacterBody2D
+Button
+ColorRect
+CanvasLayer
+Label
+Panel

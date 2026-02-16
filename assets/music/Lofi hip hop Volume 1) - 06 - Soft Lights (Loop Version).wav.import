@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnu5kqg31ue1j"
+path="res://.godot/imported/Lofi hip hop Volume 1) - 06 - Soft Lights (Loop Version).wav-31ff7e1bb1830bc9a48bb8e51dbaf72c.sample"
+
+[deps]
+
+source_file="res://assets/music/Lofi hip hop Volume 1) - 06 - Soft Lights (Loop Version).wav"
+dest_files=["res://.godot/imported/Lofi hip hop Volume 1) - 06 - Soft Lights (Loop Version).wav-31ff7e1bb1830bc9a48bb8e51dbaf72c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
