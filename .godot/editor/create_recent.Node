@@ -1,3 +1,5 @@
+CanvasLayer
+Control
 AudioStreamPlayer2D
 CollisionShape2D
 Node2D
@@ -9,6 +11,4 @@ Area2D
 CharacterBody2D
 Button
 ColorRect
-CanvasLayer
 Label
-Panel

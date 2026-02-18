@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bm84efinymopm"]
+[gd_scene load_steps=12 format=3 uid="uid://bm84efinymopm"]
 
 [ext_resource type="Script" uid="uid://tm6ac88plk16" path="res://pause/pause.gd" id="1_w5bci"]
 [ext_resource type="Shader" uid="uid://bkwjqjyyh10ox" path="res://pause/pause.gdshader" id="2_jlsut"]
+[ext_resource type="FontFile" uid="uid://dj0giqk7mfwmq" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_qhaht"]
+[ext_resource type="FontFile" uid="uid://crft7xjpq21ha" path="res://assets/fonts/PixelOperator8.ttf" id="4_m0fkg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n74i5"]
 shader = ExtResource("2_jlsut")
@@ -18,7 +20,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/path = NodePath("UI/ColorRect:material:shader_parameter/lod")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -34,7 +36,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/path = NodePath("UI/ColorRect:material:shader_parameter/lod")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -50,7 +52,10 @@ _data = {
 &"blur": SubResource("Animation_ftery")
 }
 
-[node name="Pause" type="Control"]
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+
+[node name="UI" type="Control" parent="."]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -60,7 +65,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w5bci")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="UI"]
 material = SubResource("ShaderMaterial_n74i5")
 layout_mode = 1
 anchors_preset = 15
@@ -69,39 +74,42 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -136.0
-offset_top = -226.5
-offset_right = 96.0
-offset_bottom = 175.0
+anchors_preset = -1
+anchor_left = 0.48800004
+anchor_top = 0.455
+anchor_right = 0.559
+anchor_bottom = 0.557
+offset_left = -187.17603
+offset_top = -249.84
+offset_right = 187.82397
+offset_bottom = 250.16
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="PanelContainer"]
+[node name="Label" type="Label" parent="UI/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("3_qhaht")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_w5bci")
-text = "PAUSED"
+text = "
+PAUSED"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 44
 
-[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Resume" type="Button" parent="UI/PanelContainer/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.48178947, 0.48178947, 0.48178947, 1)
+theme_override_fonts/font = ExtResource("4_m0fkg")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tomjn")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ftery")
@@ -109,10 +117,11 @@ text = "RESUME"
 autowrap_trim_flags = 0
 icon_alignment = 1
 
-[node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Restart" type="Button" parent="UI/PanelContainer/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.48178947, 0.48178947, 0.48178947, 1)
+theme_override_fonts/font = ExtResource("4_m0fkg")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tomjn")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ftery")
@@ -120,10 +129,11 @@ text = "RESTART"
 autowrap_trim_flags = 0
 icon_alignment = 1
 
-[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="UI/PanelContainer/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.48178947, 0.48178947, 0.48178947, 1)
+theme_override_fonts/font = ExtResource("4_m0fkg")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tomjn")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ftery")
@@ -131,11 +141,12 @@ text = "QUIT"
 autowrap_trim_flags = 0
 icon_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
+root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_mwgvy")
 }
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="UI/PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="UI/PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="UI/PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

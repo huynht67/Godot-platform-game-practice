@@ -1,1 +1,5 @@
-res://scenes/music.tscn
+res://scenes/main_menu.tscn
+res://scenes/main_menu.gd
+res://scenes/game_new.tscn
+res://pause/pause.tscn
+res://pause/pause.gd
