@@ -114,8 +114,9 @@ position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_pjw23")
 
 [node name="Killzone" parent="." instance=ExtResource("2_n6pvg")]
+script = null
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_0l8pv")
 

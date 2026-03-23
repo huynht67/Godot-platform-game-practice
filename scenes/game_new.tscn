@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://dpacx3tpoog0j"]
+[gd_scene load_steps=18 format=3 uid="uid://dpacx3tpoog0j"]
 
 [ext_resource type="Script" uid="uid://d1beq52whxn1v" path="res://scripts/game_manager.gd" id="1_5fyf6"]
 [ext_resource type="FontFile" uid="uid://dj0giqk7mfwmq" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_0pqrj"]
 [ext_resource type="PackedScene" uid="uid://do3j8kote024j" path="res://scenes/player2.tscn" id="3_knk8k"]
+[ext_resource type="PackedScene" uid="uid://d3n2lwr8jw8mi" path="res://scenes/healthbar.tscn" id="4_0pqrj"]
 [ext_resource type="Texture2D" uid="uid://ckwm7iqr41hap" path="res://assets/sprites/world_tileset.png" id="4_8pm3n"]
 [ext_resource type="PackedScene" uid="uid://dhq0pa6na6p7k" path="res://scenes/killzone.tscn" id="5_2eq56"]
 [ext_resource type="PackedScene" uid="uid://cpsebg2lxc8ax" path="res://scenes/coin.tscn" id="6_yom5i"]
@@ -256,7 +257,8 @@ layer_1/tile_data = PackedInt32Array(131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 2
 [node name="Killzone" parent="." instance=ExtResource("5_2eq56")]
 position = Vector2(-90, 150)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-28, 0)
 shape = SubResource("WorldBoundaryShape2D_p57ef")
 
 [node name="Coins" type="Node" parent="."]
@@ -484,5 +486,19 @@ theme_override_fonts/font = ExtResource("9_fku40")
 theme_override_font_sizes/font_size = 8
 text = "And it hurts,
 doesn't it?"
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Healthbar" parent="HUD/UI" instance=ExtResource("4_0pqrj")]
+layout_mode = 0
+offset_bottom = 27.0
 
 [node name="Pause" parent="." instance=ExtResource("10_5fyf6")]

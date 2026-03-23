@@ -1,5 +1,9 @@
 res://scenes/main_menu.tscn
-res://scenes/main_menu.gd
+res://scenes/healthbar.gd
 res://scenes/game_new.tscn
-res://pause/pause.tscn
-res://pause/pause.gd
+res://scenes/healthbar.tscn
+res://scripts/player.gd
+res://scenes/slime.gd
+res://scripts/killzone.gd
+res://scenes/killzone.tscn
+res://scenes/slime.tscn

@@ -4,7 +4,14 @@ const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_attacking: bool = false
-var health: int = 3
+
+var max_hp := 7
+var hp := 7
+var can_take_damage := true
+@export var damage_cooldown := 0.6
+
+var is_dead := false
+
 var is_blue_form: bool = false
 var bullet_scene = preload("uid://dtclgpudk4ih3")
 
@@ -37,6 +44,7 @@ var circle := CircleShape2D.new()
 @onready var form_sfx: AudioStreamPlayer2D = $FormChangeSfx
 
 @onready var death_sfx: AudioStreamPlayer2D = $DeathSfx
+@onready var healthbar: ProgressBar = $"../HUD/UI/Healthbar"
 
 
 
@@ -55,10 +63,16 @@ func anim(name: String) -> String:
 
 
 func _ready() -> void:
+	
+	
 	animated_sprite.animation_finished.connect(_on_animation_finished)
 	hitbox.monitoring = false
 	hitbox.monitorable = false
 	hitbox_shape.disabled = true
+	
+	
+	healthbar.call_deferred("init_health", max_hp)
+	
 	add_to_group("player")
 	
 	rect_long = RectangleShape2D.new()
@@ -172,6 +186,10 @@ func toggle_blue_form() -> void:
 	
 func _physics_process(delta: float) -> void:
 # Add the gravity.
+	if is_dead:
+		velocity += get_gravity() * delta
+		move_and_slide()
+		return
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if is_attacking:
@@ -234,16 +252,66 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy_hurtbox"):
 		var knockback_dir = (area.global_position - global_position).normalized()
 		area.get_parent().take_damage(1, knockback_dir)
+#func take_damage(amount: int = 1) -> void:
+	#health -=amount
+	#print("Player HP: ", health)
+	#animated_sprite.modulate = Color.RED
+	#await get_tree().create_timer(0.2).timeout
+	#animated_sprite.modulate = Color.WHITE
+	#if health <= 0:
+		#die()
+		
+#func take_damage(amount: int) -> void:
+	#hp = max(hp - amount, 0)
+	#healthbar.health = hp
+
+	#if hp <= 0:
+		#die()
+		
 func take_damage(amount: int = 1) -> void:
-	health -=amount
-	print("Player HP: ", health)
+	if not can_take_damage:
+		return
+
+	can_take_damage = false
+	hp -= amount
+	print("Player HP: ", hp)
+
+	healthbar.health = hp
+
 	animated_sprite.modulate = Color.RED
 	await get_tree().create_timer(0.2).timeout
 	animated_sprite.modulate = Color.WHITE
-	if health <= 0:
+
+	if hp <= 0:
 		die()
+		return
+
+	await get_tree().create_timer(damage_cooldown).timeout
+	can_take_damage = true
+
+#func die() -> void:
+	#death_sfx.stop()
+	#death_sfx.play()
+	#animated_sprite.play("die")
+	#set_physics_process(false)
 func die() -> void:
+	if is_dead:
+		return
+
+	is_dead = true
+	can_take_damage = false
+
 	death_sfx.stop()
 	death_sfx.play()
 	animated_sprite.play("die")
-	set_physics_process(false)
+	animated_sprite.modulate = Color.WHITE
+
+	hitbox.monitoring = false
+	hitbox.monitorable = false
+	hitbox_shape.disabled = true
+
+	$CollisionShape2D.set_deferred("disabled", true)
+	velocity = Vector2.ZERO
+
+	await get_tree().create_timer(0.8).timeout
+	get_tree().reload_current_scene()

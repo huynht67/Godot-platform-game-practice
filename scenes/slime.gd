@@ -45,7 +45,8 @@ func _ready() -> void:
 	
 func _on_killzone_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.die()
+		print("SLIME HIT PLAYER")
+		body.take_damage(1)
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
