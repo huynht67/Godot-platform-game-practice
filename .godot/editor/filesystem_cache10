@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774294944
+::res://::1775925224
 bullet.gd::GDScript::6511105766133520229::1771205521::0::1::::<>Area2D<><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout::4749146070369331163::1765098066::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1765099873::0::1::::<><><>0<>0<><>::
@@ -39,7 +39,7 @@ slime_green.png::CompressedTexture2D::6294967036742003539::1764998472::176499847
 slime_purple.png::CompressedTexture2D::8296133678606728420::1764998472::1764998472::1::::<><><>0<>0<>2ea4ad70744be89035988f436d5cc3ba<>res://.godot/imported/slime_purple.png-26dc5ddef235ce6a400e78e0d532b050.ctex::
 Sprite-0005_1.png::CompressedTexture2D::3736697928873753015::1771141084::1771143170::1::::<><><>0<>0<>00a721581fd8b529bc46a83324ec321c<>res://.godot/imported/Sprite-0005_1.png-f7d124631134918e1a6c5874ca2c5e40.ctex::
 world_tileset.png::CompressedTexture2D::5520932309389853035::1764998472::1764998472::1::::<><><>0<>0<>aaf07aa0f0edaa7d7dd151a4995156d6<>res://.godot/imported/world_tileset.png-61a32465f33c3d9d3bfecb75b6485009.ctex::
-::res://assets/sprites/z/::1771799779
+::res://assets/sprites/z/::1775541954
 Bullet0001.png::CompressedTexture2D::8374139153629618609::1771144392::1771144414::1::::<><><>0<>0<>1258d6aca51d2b2fd45e47a35d4db765<>res://.godot/imported/Bullet0001.png-ac5b8c7961bb3d44d9d06f8b58b7419f.ctex::
 Sprite-0004_2.png::CompressedTexture2D::1390566208426441743::1771130212::1771130217::1::::<><><>0<>0<>57d2a0e54f6b36de5e3de0971da7c894<>res://.godot/imported/Sprite-0004_2.png-670f3031348cfe396259e9c72c40cbb7.ctex::
 Sprite-0004_3.png::CompressedTexture2D::7989017552544750334::1771130519::1771130625::1::::<><><>0<>0<>366f6219b318ec16def5f303965a2302<>res://.godot/imported/Sprite-0004_3.png-aa22a978d0331f0d8dc5578b58b7a02d.ctex::
@@ -78,25 +78,27 @@ pause.gd::GDScript::1360242946492197859::1771392701::0::1::::<>Control<><>0<>0<>
 pause.gdshader::Shader::3134300967186429591::1766508368::0::1::::<><><>0<>0<><>::
 pause.tscn::PackedScene::3298579484797716290::1771393092::0::1::::<><><>0<>0<><>::uid://tm6ac88plk16::::res://pause/pause.gd<>uid://bkwjqjyyh10ox::::res://pause/pause.gdshader<>uid://dj0giqk7mfwmq::::res://assets/fonts/PixelOperator8-Bold.ttf<>uid://crft7xjpq21ha::::res://assets/fonts/PixelOperator8.ttf
 pause_menu.gdshader::Shader::8909227147353401161::1766507967::0::1::::<><><>0<>0<><>::
-::res://scenes/::1771391778
+::res://scenes/::1774301939
 bullet.tscn::PackedScene::8497658256291057938::1771205521::0::1::::<><><>0<>0<><>::uid://cy1a7wsyka4j6::::res://bullet.gd<>uid://drkq33y4cd8rt::::res://assets/sprites/z/Bullet0001.png
 coin.tscn::PackedScene::5863077832675196859::1765099622::0::1::::<><><>0<>0<><>::uid://ct4g7jm2c2es4::::res://scripts/coin.gd<>uid://b30r3u15pdkd3::::res://assets/sprites/coin.png<>uid://mnm1cky7piae::::res://assets/sounds/coin.wav
 game.tscn::PackedScene::1701179674522081005::1766511406::0::1::::<><><>0<>0<><>::uid://d1beq52whxn1v::::res://scripts/game_manager.gd<>uid://be8qbmt0fe144::::res://scenes/player.tscn<>uid://bm84efinymopm::::res://pause/pause.tscn<>uid://ckwm7iqr41hap::::res://assets/sprites/world_tileset.png<>uid://dj0giqk7mfwmq::::res://assets/fonts/PixelOperator8-Bold.ttf<>uid://cgqpg3bl07ghk::::res://scenes/platform.tscn<>uid://cpsebg2lxc8ax::::res://scenes/coin.tscn<>uid://dhq0pa6na6p7k::::res://scenes/killzone.tscn<>uid://dg4n7tp4d7q1y::::res://scenes/slime.tscn<>uid://crft7xjpq21ha::::res://assets/fonts/PixelOperator8.ttf
 game_new.gd::GDScript::4710168308943410852::1766512446::0::1::::<>CanvasLayer<><>0<>0<><>::
-game_new.tscn::PackedScene::8212258713601020515::1771391778::0::1::::<><><>0<>0<><>::uid://d1beq52whxn1v::::res://scripts/game_manager.gd<>uid://dj0giqk7mfwmq::::res://assets/fonts/PixelOperator8-Bold.ttf<>uid://do3j8kote024j::::res://scenes/player2.tscn<>uid://ckwm7iqr41hap::::res://assets/sprites/world_tileset.png<>uid://dhq0pa6na6p7k::::res://scenes/killzone.tscn<>uid://cpsebg2lxc8ax::::res://scenes/coin.tscn<>uid://cgqpg3bl07ghk::::res://scenes/platform.tscn<>uid://dg4n7tp4d7q1y::::res://scenes/slime.tscn<>uid://crft7xjpq21ha::::res://assets/fonts/PixelOperator8.ttf<>uid://bm84efinymopm::::res://pause/pause.tscn
-killzone.tscn::PackedScene::7685158760819055582::1765009039::0::1::::<><><>0<>0<><>::uid://cwjj3n4c6aw0s::::res://scripts/killzone.gd
+game_new.tscn::PackedScene::8212258713601020515::1774301939::0::1::::<><><>0<>0<><>::uid://d1beq52whxn1v::::res://scripts/game_manager.gd<>uid://dj0giqk7mfwmq::::res://assets/fonts/PixelOperator8-Bold.ttf<>uid://do3j8kote024j::::res://scenes/player2.tscn<>uid://d3n2lwr8jw8mi::::res://scenes/healthbar.tscn<>uid://ckwm7iqr41hap::::res://assets/sprites/world_tileset.png<>uid://dhq0pa6na6p7k::::res://scenes/killzone.tscn<>uid://cpsebg2lxc8ax::::res://scenes/coin.tscn<>uid://cgqpg3bl07ghk::::res://scenes/platform.tscn<>uid://dg4n7tp4d7q1y::::res://scenes/slime.tscn<>uid://crft7xjpq21ha::::res://assets/fonts/PixelOperator8.ttf<>uid://bm84efinymopm::::res://pause/pause.tscn
+healthbar.gd::GDScript::3341524740990799571::1774300241::0::1::::<>ProgressBar<><>0<>0<><>::
+healthbar.tscn::PackedScene::9153046769572312900::1774296915::0::1::::<><><>0<>0<><>::uid://bnuwoop7khjp0::::res://scenes/healthbar.gd
+killzone.tscn::PackedScene::7685158760819055582::1774301833::0::1::::<><><>0<>0<><>::uid://cwjj3n4c6aw0s::::res://scripts/killzone.gd
 main_menu.gd::GDScript::2034555171426641910::1771390726::0::1::::<>Control<><>0<>0<><>::
-main_menu.tscn::PackedScene::1945949139548393268::1771390147::0::1::::<><><>0<>0<><>::uid://38s3dlwmc6i1::::res://scenes/main_menu.gd<>uid://c7l1xk70rpvci::::res://assets/sprites/Screenshot 2025-12-21 021244.png<>uid://dj0giqk7mfwmq::::res://assets/fonts/PixelOperator8-Bold.ttf
+main_menu.tscn::PackedScene::1945949139548393268::1774294965::0::1::::<><><>0<>0<><>::uid://38s3dlwmc6i1::::res://scenes/main_menu.gd<>uid://c7l1xk70rpvci::::res://assets/sprites/Screenshot 2025-12-21 021244.png<>uid://dj0giqk7mfwmq::::res://assets/fonts/PixelOperator8-Bold.ttf
 music.tscn::PackedScene::781815434369823838::1771271262::0::1::::<><><>0<>0<><>::uid://dnu5kqg31ue1j::::res://assets/music/Lofi hip hop Volume 1) - 06 - Soft Lights (Loop Version).wav
 pause.gd::GDScript::5295576712768357264::1766511944::0::1::::<>CanvasLayer<><>0<>0<><>::
 platform.tscn::PackedScene::5227927415667350592::1765009038::0::1::::<><><>0<>0<><>::uid://6h53p111675::::res://assets/sprites/platforms.png
 player2.tscn::PackedScene::8200314370989586487::1771228769::0::1::::<><><>0<>0<><>::uid://c3ubxpp10k6x6::::res://scripts/player.gd<>uid://dmgj8iafsho83::::res://assets/sprites/z/Sprite-0004_I.png<>uid://574k1xk6lulj::::res://assets/sprites/z/Sprite-0004_A2.png<>uid://b7pm2cil76l2i::::res://assets/sprites/z/Sprite-0005_3_1t.png<>uid://hri345bym01k::::res://assets/sprites/z/Sprite-0004_J.png<>uid://crkxkfh7i8360::::res://assets/sprites/z/Sprite-0004_A3.png<>uid://b4xu6rxq68xbu::::res://assets/sprites/z/Sprite-0004_R.png<>uid://lvkqlgt3hgsm::::res://assets/sprites/z/Sprite-0006_3.png<>uid://7y1cytpowpfy::::res://assets/sprites/z/Sprite-0005_J2.png<>uid://dxbqg21p67iag::::res://assets/sprites/z/Sprite-0007_3.png<>uid://dlaxtah5xtgvs::::res://assets/sprites/z/Sprite-0005_I.png<>uid://bobar2jwuo051::::res://assets/sprites/z/Sprite-0005_J.png<>uid://cj84a5kqpagtv::::res://assets/sprites/z/Sprite-0006_I-sheet.png<>uid://fha4druvw8kq::::res://assets/sprites/z/Sprite-0005_R.png<>uid://cejxyukuvhe6m::::res://assets/sprites/z/Sprite-0007_I-sheet.png<>uid://b2f3ygjc5a2fk::::res://assets/sounds/SwordSFX_1.wav<>uid://crr2g5uel4soe::::res://assets/sounds/GunSFX.wav<>uid://dmfo1r8poq30v::::res://assets/sprites/z/Sprite-0006_J.png<>uid://dc8nf671gd8rv::::res://assets/sprites/z/Sprite-0007_J.png<>uid://dsht8dlyyiolt::::res://assets/sprites/z/Sprite-0006_R-sheet.png<>uid://crlf3i1yqj5pt::::res://assets/sprites/z/Sprite-0007_R-sheet.png<>uid://g3kugycdshsm::::res://assets/sounds/FormChangeSfx.wav<>uid://b2hn1y0mslsso::::res://assets/sounds/SwordSFX.wav<>uid://bpt8bvea10w6u::::res://assets/sounds/AxeSFX.wav<>uid://c5wa2kcrs4crc::::res://assets/sounds/ScytheSFX.wav<>uid://bpmcyirq1d2cl::::res://assets/sounds/Impact 4.wav
 player.tscn::PackedScene::2736274442581612719::1765096325::0::1::::<><><>0<>0<><>::uid://cwf1bm76xv78p::::res://assets/sprites/knight.png<>uid://c3ubxpp10k6x6::::res://scripts/player.gd
-slime.gd::GDScript::5260428415233398520::1771228951::0::1::::<>CharacterBody2D<><>0<>0<><>::
-slime.tscn::PackedScene::7641109556524784092::1771228931::0::1::::<><><>0<>0<><>::uid://cg7gqtqmsfllo::::res://scenes/slime.gd<>uid://cvxlgmveuihst::::res://assets/sprites/slime_green.png<>uid://dhq0pa6na6p7k::::res://scenes/killzone.tscn<>uid://d1ax8m5f06lxm::::res://assets/sounds/RetroImpact.wav<>uid://4dmtbkiktebn::::res://assets/sounds/explosion.wav
+slime.gd::GDScript::5260428415233398520::1774300744::0::1::::<>CharacterBody2D<><>0<>0<><>::
+slime.tscn::PackedScene::7641109556524784092::1774301833::0::1::::<><><>0<>0<><>::uid://cg7gqtqmsfllo::::res://scenes/slime.gd<>uid://cvxlgmveuihst::::res://assets/sprites/slime_green.png<>uid://dhq0pa6na6p7k::::res://scenes/killzone.tscn<>uid://d1ax8m5f06lxm::::res://assets/sounds/RetroImpact.wav<>uid://4dmtbkiktebn::::res://assets/sounds/explosion.wav
 Sprite-0005_3_1t.png::CompressedTexture2D::7278805160178078147::1771146621::1771146621::1::::<><><>0<>0<>0bcb4b423dfdf43100d295cc51a0fe2f<>res://.godot/imported/Sprite-0005_3_1t.png-7c628fc378385462a8fd68d9b5cb54b9.ctex::
-::res://scripts/::1771228825
+::res://scripts/::1774302455
 coin.gd::GDScript::6166718291216406249::1765099622::0::1::::<>Area2D<><>0<>0<><>::
 game_manager.gd::GDScript::8986509422515826277::1766512446::0::1::::<>Node<><>0<>0<><>::
-killzone.gd::GDScript::6336172510108891308::1765096464::0::1::::<>Area2D<><>0<>0<><>::
-player.gd::GDScript::6779519146822360969::1771228825::0::1::::<>CharacterBody2D<><>0<>0<><>::
+killzone.gd::GDScript::6336172510108891308::1774302455::0::1::::<>Area2D<><>0<>0<><>::
+player.gd::GDScript::6779519146822360969::1774302386::0::1::::<>CharacterBody2D<><>0<>0<><>::

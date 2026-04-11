@@ -66,10 +66,7 @@ func _physics_process(delta: float) -> void:
 		direction *= -1
 		animated_sprite.flip_h = not animated_sprite.flip_h
 	velocity.x = direction * SPEED
-	#if is_on_floor():
-		#animated_sprite.play("idle")
-	#else:
-		#animated_sprite.play("jump")
+
 		
 func take_damage(damage: int = 1, knockback_dir: Vector2 = Vector2.ZERO) -> void:
 	hit_sfx.stop()

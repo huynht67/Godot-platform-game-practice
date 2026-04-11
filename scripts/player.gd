@@ -84,11 +84,7 @@ func _ready() -> void:
 	circle.radius = 80                 # purple circular AOE
 
 	apply_form_visuals()
-	#if animated_sprite == null:
-	#	push_error("AnimatedSprite2D NOT FOUND! Check scene tree.")
-	#animated_sprite.animation_finished.connect(_on_animation_finished)
-	#hitbox.monitoring = false
-	#add_to_group("player")
+
 	
 func cycle_form() -> void:
 	current_form = (current_form + 1) % 4
@@ -195,10 +191,7 @@ func _physics_process(delta: float) -> void:
 	if is_attacking:
 		move_and_slide()
 		return
-	#if is_attacking and is_on_floor():
-		#is_attacking=false
-		#hitbox.monitoring=false
-		#update_animation()
+
 # Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -240,8 +233,7 @@ func spawn_bullet() -> void:
 	
 	bullet.global_position = global_position + Vector2(30 * dir, -5)
 	
-	#bullet.global_position = global_position + Vector2(25 * (-1 if animated_sprite.flip_h else 1), -10)
-	#bullet.shoot_direction = -1 if animated_sprite.flip_h else 1
+
 func _on_animation_finished() -> void:
 	is_attacking = false
 	hitbox.monitoring = false
@@ -252,21 +244,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy_hurtbox"):
 		var knockback_dir = (area.global_position - global_position).normalized()
 		area.get_parent().take_damage(1, knockback_dir)
-#func take_damage(amount: int = 1) -> void:
-	#health -=amount
-	#print("Player HP: ", health)
-	#animated_sprite.modulate = Color.RED
-	#await get_tree().create_timer(0.2).timeout
-	#animated_sprite.modulate = Color.WHITE
-	#if health <= 0:
-		#die()
-		
-#func take_damage(amount: int) -> void:
-	#hp = max(hp - amount, 0)
-	#healthbar.health = hp
 
-	#if hp <= 0:
-		#die()
 		
 func take_damage(amount: int = 1) -> void:
 	if not can_take_damage:
@@ -289,11 +267,7 @@ func take_damage(amount: int = 1) -> void:
 	await get_tree().create_timer(damage_cooldown).timeout
 	can_take_damage = true
 
-#func die() -> void:
-	#death_sfx.stop()
-	#death_sfx.play()
-	#animated_sprite.play("die")
-	#set_physics_process(false)
+
 func die() -> void:
 	if is_dead:
 		return

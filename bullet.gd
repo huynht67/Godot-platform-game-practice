@@ -8,8 +8,7 @@ func _ready() -> void:
 	timer.timeout.connect(queue_free)  # Auto-delete after 2s
 	area_entered.connect(_on_area_entered)
 	sprite.flip_h = (shoot_direction < 0)
-	#if shoot_direction < 0:
-		#sprite.flip_h=true
+	
 
 func _physics_process(delta: float) -> void:
 	# Constant forward speed
